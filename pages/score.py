@@ -41,8 +41,7 @@ age_selection = st.slider('Average_Score:',
                         value=(min(ages),max(ages)))
 
 company_selection = st.multiselect('Job_Role:',
-                                   company,
-                                    default=company)
+                                   company,default=company)
 
 st.title('Average scored required for given company')
 mask = (df['Average_Score'].between(*age_selection)) & (df['Job_Role'].isin(company_selection))
