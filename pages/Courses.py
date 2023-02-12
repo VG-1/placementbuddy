@@ -1,3 +1,5 @@
+import streamlit as st
+
 ds_course = [['Machine Learning Crash Course by Google [Free]', 'https://developers.google.com/machine-learning/crash-course'],
              ['Machine Learning A-Z by Udemy','https://www.udemy.com/course/machinelearning/'],
              ['Machine Learning by Andrew NG','https://www.coursera.org/learn/machine-learning'],
@@ -58,3 +60,29 @@ interview_videos = ['https://youtu.be/Ji46s5BHdr0','https://youtu.be/seVxXHi2YMs
                     'https://youtu.be/9FgfsLa_SmY','https://youtu.be/2HQmjLu-6RQ',
                     'https://youtu.be/DQd_AlIvHUw','https://youtu.be/oVVdezJ0e7w'
                     'https://youtu.be/JZK1MZwUyUU','https://youtu.be/CyXLhHQS3KY']
+import random
+def recommender(course_list):
+    c = 0
+    rec_course = []
+    # no_of_reco = st.slider('Choose Number of Course Recommendations:', 1, 10, 4)
+    random.shuffle(course_list)
+    for c_name, c_link in course_list:
+        c += 1
+        st.markdown(f"({c}) [{c_name}]({c_link})")
+        rec_course.append(c_name)
+
+    return rec_course
+
+st.title('Data Science Courses')
+ec_course = recommender(ds_course)
+
+st.title('Software Development Courses')
+sde_course = recommender(sde)
+
+st.title('Python Development Courses')
+pde_course = recommender(python_developer)
+st.title('UI/UX Courses')
+ux_course = recommender(uiux_course)
+st.title('DevOps Courses')
+dev_course = recommender(devops)
+

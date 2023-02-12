@@ -2,8 +2,7 @@ import pandas as pd
 import streamlit as st
 import random, time
 from pages.Courses import ds_course,uiux_course,sde,devops,python_developer,resume_videos,interview_videos
-# import Courses
-
+import streamlit.components.v1 as com
 from streamlit_tags import st_tags
 
 
@@ -88,6 +87,14 @@ elif st.button('Software Devloper'):
     time.sleep(10)
 
 
-import streamlit.components.v1 as com
+# Resume writing video
+st.header("**Bonus Video for Resume Writing Tips💡**")
+resume_vid = random.choice(resume_videos)
+st.video(resume_vid)
 
-com.html("""<iframe width="996" height="560" src="https://www.youtube.com/embed/hqu5EYMLCUw" title="Resume Analyser Application using NLP Python with Code | Full Responsive Web Application" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>""")
+## Interview Preparation Video
+st.header("**Bonus Video for Interview👨‍💼 Tips💡**")
+interview_vid = random.choice(interview_videos)
+st.video(interview_vid)
+
+# com.html("""<iframe width="996" height="560" src="https://www.youtube.com/embed/hqu5EYMLCUw" title="Resume Analyser Application using NLP Python with Code | Full Responsive Web Application" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>""")

@@ -5,9 +5,14 @@ from PIL import Image
 
 
 st.set_page_config(page_title='Score Analysis')
-st.header('hey! here you can see the score analysis of your test')
-st.subheader('hope we are helpful to you :)')
-st.subheader('Adarsh score is 69')
+st.header('Here you can see the score analysis of your test')
+st.write(' ')
+st.write(' ')
+# col1, col2, col3 = st.columns(3)
+# with col1:
+st.image("understanding-your-cibil-score.jpg",width=550)
+
+st.subheader('Adarsh\'s score is 69')
 
 
 ### --- LOAD DATAFRAME
@@ -39,10 +44,10 @@ company_selection = st.multiselect('Job_Role:',
                                    company,
                                     default=company)
 
-# --- FILTER DATAFRAME BASED ON SELECTION
+st.title('Average scored required for given company')
 mask = (df['Average_Score'].between(*age_selection)) & (df['Job_Role'].isin(company_selection))
 number_of_result = df[mask].shape[0]
-st.markdown(f'*Available Results: {number_of_result}*')
+# st.markdown(f'*Available Results: {number_of_result}*')
 
 # --- GROUP DATAFRAME AFTER SELECTION
 df_grouped = df[mask].groupby(by=['Company']).count()[['Average_Score']]
@@ -51,25 +56,12 @@ df_grouped = df_grouped.reset_index()
 
 # --- PLOT BAR CHART
 bar_chart = px.bar(df_grouped,
-                   x='Company',
-                   y='Average_Score',
-                   text='Average_Score',
-                   color_discrete_sequence = ['#F63366']*len(df_grouped),
-                   template= 'plotly_white')
+                   x='Company',y='Average_Score',text='Average_Score',color_discrete_sequence = ['#F63366']*len(df_grouped),template= 'plotly_white')
 st.plotly_chart(bar_chart)
 
 # --- DISPLAY IMAGE & DATAFRAME
-col1, col2 = st.columns(2)
-image = Image.open('images/survey.jpg')
-col1.image(image,
-        caption='Designed by slidesgo / Freepik',
-        use_column_width=True)
-col2.dataframe(df[mask])
 
-# --- PLOT PIE CHART
-pie_chart = px.pie(df_participants,
-                title='Total No. of Participants',
-                values='Participants',
-                names='Companies')
+st.title('Cut-off for given companies')
+st.dataframe(df[mask])
 
-st.plotly_chart(pie_chart)
+
