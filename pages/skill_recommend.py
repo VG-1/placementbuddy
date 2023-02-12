@@ -87,19 +87,7 @@ elif st.button('Software Devloper'):
     st.button('UI/ UX Designer')
     time.sleep(10)
 
-## Resume writing video
-# st.header("**Bonus Video for Resume Writing Tips💡**")
-# resume_vid = random.choice(resume_videos)
-# res_vid_title = fetch_yt_video(resume_vid)
-# st.subheader("✅ **"+res_vid_title+"**")
-# st.video(resume_vid)
 
-# ## Interview Preparation Video
-# st.header("**Bonus Video for Interview👨‍💼 Tips💡**")
-# interview_vid = random.choice(interview_videos)
-# int_vid_title = fetch_yt_video(interview_vid)
-# st.subheader("✅ **" + int_vid_title + "**")
-# st.video(interview_vid)
 import streamlit.components.v1 as com
 
 com.html("""<iframe width="996" height="560" src="https://www.youtube.com/embed/hqu5EYMLCUw" title="Resume Analyser Application using NLP Python with Code | Full Responsive Web Application" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>""")
