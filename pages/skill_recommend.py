@@ -91,6 +91,3 @@ elif st.button('Software Devloper'):
 import streamlit.components.v1 as com
 
 com.html("""<iframe width="996" height="560" src="https://www.youtube.com/embed/hqu5EYMLCUw" title="Resume Analyser Application using NLP Python with Code | Full Responsive Web Application" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>""")
-
-
-
