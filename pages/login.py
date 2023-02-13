@@ -26,6 +26,6 @@ if selected == "Contact":
     st.title(f"You have selected {selected}")
 
 # st.set_page_config(page_title='Survey Result')
-st.header('heyo welcome to placement buddies :) ')
+st.header('Welcome to placement buddies :) ')
 st.button('Log In')
 st.button('Sign In')
