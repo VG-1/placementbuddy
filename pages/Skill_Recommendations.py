@@ -19,7 +19,7 @@ def course_recommender(course_list):
 
     return rec_course
 
-st.subheader("**Skills Recommendation💡**")
+st.subheader("**Skills Recommendations💡**")
 
 st.title('Resource Sharing')
 

@@ -36,3 +36,24 @@ st.markdown(f'''
 
 ''',
 unsafe_allow_html=True)
+
+st.title('Connect with Alumni\'s')
+
+st.header('Myshkin Ingwale')
+st.image('myshkin.jpeg',width=300)
+st.subheader('CEO of Biosense Technologies')
+st.write('📧myshkin.ingwale@gmail.com')
+
+st.write(' ')
+st.write(' ')
+st.header('Sanyam Badola')
+st.image('sanyam.jpeg',width=300)
+st.subheader('Chief Digital Officer at Physics Wallah (PW)')
+st.write('📧sanyambadola@gmail.com')
+
+st.write(' ')
+st.write(' ')
+st.write(' ')
+# st.button()
+st.header('More: https://www.manitbhopalalumni.com/members.dz')
+# st.write('')
